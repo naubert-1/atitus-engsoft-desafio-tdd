@@ -3,3 +3,7 @@ export function calcularDesconto(codigo, valor) {
   return 0;
 }
 
+
+  const desconto = calcularDesconto(total, voucher);
+  return total - desconto;
+}
