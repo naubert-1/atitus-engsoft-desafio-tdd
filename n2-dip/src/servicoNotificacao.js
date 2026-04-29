@@ -8,3 +8,11 @@ export class ServicoNotificacao {
   }
 }
 
+
+  const servico = criarServicoNotificacao(gatewayMock);
+
+  const usuario = { email: 'teste@email.com' };
+  servico.notificar(usuario, 'Olá');
+
+  expect(gatewayMock.enviar).toHaveBeenCalledWith(usuario, 'Olá');
+});
